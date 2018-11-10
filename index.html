@@ -10,15 +10,15 @@
 
         <!-- Description, Keywords and Author -->
 
-        <meta name="description" content="">
+        <meta name="BarterUp" content="">
 
         <meta name="author" content="">
 
         
 
-        <title>:: BARTERUP::</title>
+        <title>:: BARTERUP ::</title>
 
-		<link rel="shortcut icon" href="#" type="#">
+		<link rel="shortcut icon" href="images/barterUPlogo.png" type="image/x-icon">
 
 
 
@@ -38,15 +38,13 @@
 
         <!-- font-awesome -->
 
+        <link href="css/fonts.css" rel="stylesheet" type="text/css">
+
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <!-- font-awesome -->
 
-        <link href="css/effects/set2.css" rel="stylesheet" type="text/css">
-
-        <link href="css/effects/normalize.css" rel="stylesheet" type="text/css">
-
-        <link href="css/effects/component.css"  rel="stylesheet" type="text/css" >
+        
 
 	</head>
 
@@ -66,7 +64,7 @@
 
                     	<h1>
 
-                        	<a href="index.html" title="LOGO"><img src="images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="index.html" title="avana LLC"><img src="images/barterUPlogo.png" title="BarterUp" alt="BarterUp"/></a>
 
                         </h1>
 
@@ -77,11 +75,10 @@
                     <nav role="header-nav" class="navy">
 
                         <ul>
-                            <li class="nav-active"> <a href="index.html" title="Home"> Home</a></li>
 
-                            <li class="nav-active"> <a href="index.html" title="Work">Profile</a></li>
+                            <li><a href="index.html" title="Work">Home</a></li>
 
-                            <li><a href="about.html" title="About">About</a></li>
+                            <li class="nav-active"><a href="about.html" title="About">About</a></li>
 
                             <li><a href="blog.html" title="Blog">Blog</a></li>
 
@@ -101,7 +98,7 @@
 
         <!-- main -->
 
-        <main role="main-home-wrapper" class="container">
+        <main role="main-inner-wrapper" class="container">
 
         	
 
@@ -115,11 +112,11 @@
 
                     	<header>
 
-                        	<h2> Welcome to <span>BARTERUP</span></h2>
+                        	<h2><span><img src="images/barterUPlogo.png"></span> Where useless becomes useful.</h2>
 
                         </header>
 
-                        <p>Swap all your unwanted items for somthing you need.</p>
+                        <p>Over 40,000 customers use our websites and we love them.</p>
 
                     </article>
 
@@ -127,23 +124,178 @@
 
                 
 
-                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
-                	<figure class="effect-oscar">
+                	<article class="about-content">
 
-                    	<img src="images/home-images/image-1.jpg" alt="" class="img-responsive"/>
+                        <p>Log in | Sign up to Swap</p>
+                        <style>
+                            body {font-family: Arial, Helvetica, sans-serif;}
+                            
+                            /* Full-width input fields */
+                            input[type=text], input[type=password] {
+                                width: 100%;
+                                padding: 12px 20px;
+                                margin: 8px 0;
+                                display: inline-block;
+                                border: 1px solid #ccc;
+                                box-sizing: border-box;
+                            }
+                            
+                            /* Set a style for all buttons */
+                            button {
+                                background-color: rgb(43, 41, 41);
+                                color: white;
+                                padding: 14px 20px;
+                                margin: 8px 0;
+                                border: none;
+                                cursor: pointer;
+                                width: 100%;
+                            }
+                            
+                            button:hover {
+                                opacity: 0.8;
+                            }
+                            
+                            /* Extra styles for the cancel button */
+                            .cancelbtn {
+                                width: auto;
+                                padding: 10px 18px;
+                                background-color: black;
+                                color: white;
+                            }
+                            
+                            /* Center the image and position the close button */
+                            .imgcontainer {
+                                text-align: center;
+                                margin: 24px 0 12px 0;
+                                position: relative;
+                            }
+                            
+                            img.avatar {
+                                width: 40%;
+                                border-radius: 50%;
+                            }
+                            
+                            .container {
+                                padding: 16px;
+                            }
+                            
+                            span.psw {
+                                float: right;
+                                padding-top: 16px;
+                            }
+                            
+                            /* The Modal (background) */
+                            .modal {
+                                display: none; /* Hidden by default */
+                                position: fixed; /* Stay in place */
+                                z-index: 1; /* Sit on top */
+                                left: 0;
+                                top: 0;
+                                width: 100%; /* Full width */
+                                height: 100%; /* Full height */
+                                overflow: auto; /* Enable scroll if needed */
+                                background-color: rgb(0,0,0); /* Fallback color */
+                                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                                padding-top: 60px;
+                            }
+                            
+                            /* Modal Content/Box */
+                            .modal-content {
+                                background-color: #fefefe;
+                                margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                                border: 1px solid #888;
+                                width: 80%; /* Could be more or less, depending on screen size */
+                            }
+                            
+                            /* The Close Button (x) */
+                            .close {
+                                position: absolute;
+                                right: 25px;
+                                top: 0;
+                                color: #000;
+                                font-size: 35px;
+                                font-weight: bold;
+                            }
+                            
+                            .close:hover,
+                            .close:focus {
+                                color: white;
+                                cursor: pointer;
+                            }
+                            
+                            /* Add Zoom Animation */
+                            .animate {
+                                -webkit-animation: animatezoom 0.6s;
+                                animation: animatezoom 0.6s
+                            }
+                            
+                            @-webkit-keyframes animatezoom {
+                                from {-webkit-transform: scale(0)} 
+                                to {-webkit-transform: scale(1)}
+                            }
+                                
+                            @keyframes animatezoom {
+                                from {transform: scale(0)} 
+                                to {transform: scale(1)}
+                            }
+                            
+                            /* Change styles for span and cancel button on extra small screens */
+                            @media screen and (max-width: 300px) {
+                                span.psw {
+                                   display: block;
+                                   float: none;
+                                }
+                                .cancelbtn {
+                                   width: 100%;
+                                }
+                            }
+                </style>
+                </head>
+                <body>
+                <h2>LOGIN BUTTON FROM MAIN PAGE</h2>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+                <div id="id01" class="modal">
+                    
+                    <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <img src="barter_up.jpg" alt="Avatar" class="avatar">
+                    </div>
+                    <div class="container">
+                        <label for="uname"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="uname" required>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        
+                        <button type="submit">Login</button>
 
-                        <figcaption>
+                        
+                        <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                        <span class="psw">Forgot <a href="forgotPW.html">password?</a></span>
+                    </div>
+                    </form>
+                </div>
+                <script>
+                // Get the modal
+                var modal = document.getElementById('id01');
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                </script>
+                        <p> Continue as a guest </p>
 
-                        	<h2>Eliana Dedda<span> Identity</span></h2>
-
-							<p>Personal Brand Identity.</p>
-
-							<a href="works-details.html">View more</a>
-
-                        </figcaption>
-
-                    </figure>
+                    </article>
 
                 </section>
 
@@ -153,351 +305,75 @@
 
                 
 
-                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+                <!-- thumbnails -->
 
-                	<ul class="grid-lod effect-2" id="grid">
+                	<div class="thumbnails-pan">
 
-                    	<li>
+                    	<section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
 
-                        	<figure class="effect-oscar">
+                        	<figure>
 
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
+                            	<img src="images/about-images/about-image-1.jpg" class="img-responsive"/>
 
-                            <figcaption>
+                            	<figcaption>
 
-                            	
+                                	<h3>John Doe</h3>
 
-                                    <h2>Studio Thonik <span>Exhibition</span></h2>
+                                    <h5>The designer</h5>
 
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
-
-                                    <a href="works-details.html">View more</a>
-
-                                
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
-
-                            <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>Studio Thonik <span>Exhibition</span></h2>
-
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>Studio Thonik <span>Exhibition</span></h2>
-
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>Studio Thonik <span>Exhibition</span></h2>
-
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                    </ul>
-
-                </section>
-
-                
-
-                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
-
-                	<ul class="grid-lod effect-2" id="grid">
-
-                    	<li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>Anatome Milano <span>Galleria</span></h2>
-
-                                <p>Galerie Anatome based in Paris</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>Anatome Milano <span>Galleria</span></h2>
-
-                                <p>Galerie Anatome based in Paris</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                               <h2>Anatome Milano <span>Galleria</span></h2>
-
-                                <p>Galerie Anatome based in Paris</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                             <figure class="effect-oscar">
-
-                                <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
-
-                                 <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
+                                </figcaption>
 
                             </figure>
 
-                        </li>
+                        </section>
 
-                        <li>
+                        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
 
-                       	 	<figure class="effect-oscar">
+                        	<figure>
 
-                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive"/>
+                            	<img src="images/about-images/about-image-2.jpg" class="img-responsive"/>
 
-                             <figcaption>
+                            	<figcaption>
 
-                                <h2>Anatome Milano <span>Galleria</span></h2>
+                                	<h3>kristy Roan</h3>
 
-                                <p>Galerie Anatome based in Paris</p>
+                                    <h5>The Manager</h5>
 
-                                <a href="works-details.html">View more</a>
+                                </figcaption>
 
-                            </figcaption>
+                            </figure>
 
-                        </figure>
+                        </section>
 
-                        </li>
+                        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
 
-                        <li>
+                        	<figure>
 
-                        	<figure class="effect-oscar">
+                            	<img src="images/about-images/about-image-3.jpg" class="img-responsive"/>
 
-                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
+                            	<figcaption>
 
-                             <figcaption>
+                                	<h3>Jason takas</h3>
 
-                                <h2>A Brand <span>new Agency</span></h2>
+                                    <h5>The Founder</h5>
 
-                                <p>Over 40,000 customers use our themes to power their</p>
+                                </figcaption>
 
-                                <a href="works-details.html">View more</a>
+                            </figure>
 
-                            </figcaption>
+                        </section>
 
-                        </figure>
+                        
 
-                        </li>
+                     
 
-                    </ul>
+                    </div>
 
-                </section>
+                <!-- thumbnails -->
 
-                <div class="clearfix"></div>
+                
+
+                
 
             </div>
 
@@ -509,15 +385,7 @@
 
         <footer role="footer">
 
-            <!-- logo -->
-
-                <h1>
-
-                    <a href="index.html" title="avana LLC"><img src="images/logo.png" title="avana LLC" alt="avana LLC"/></a>
-
-                </h1>
-
-            <!-- logo -->
+          
 
             <!-- nav -->
 
@@ -525,7 +393,7 @@
 
             	<ul>
 
-                	<li><a href="index.html" title="Work">Home</a></li>
+                	<li><a href="index.html" title="Work">Work</a></li>
 
                     <li><a href="about.html" title="About">About</a></li>
 
@@ -572,16 +440,6 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
 
         <script src="js/bootstrap.min.js" type="text/javascript"></script>
-
-        <script src="js/effects/masonry.pkgd.min.js"  type="text/javascript"></script>
-
-		<script src="js/effects/imagesloaded.js"  type="text/javascript"></script>
-
-		<script src="js/effects/classie.js"  type="text/javascript"></script>
-
-		<script src="js/effects/AnimOnScroll.js"  type="text/javascript"></script>
-
-        <script src="js/effects/modernizr.custom.js"></script>
 
         <!-- jquery.countdown -->
 
