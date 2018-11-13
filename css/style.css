@@ -216,7 +216,7 @@ header[role="header"] nav #menu-button.open span:nth-child(3) {top: 10px;
 
 main[role="main-home-wrapper"],main[role="main-inner-wrapper"] { padding-bottom:90px}
 
-main[role="main-home-wrapper"] article[role="pge-title-content"],main[role="main-inner-wrapper"] article[role="pge-title-content"]{ padding-left:41px}
+main[role="main-home-wrapper"] article[role="pge-title-content"],main[role="main-inner-wrapper"] article[role="pge-title-content"]{ padding-left:41px;}
 
 main[role="main-home-wrapper"] article[role="pge-title-content"] header,main[role="main-inner-wrapper"] article[role="pge-title-content"] header{ padding-bottom:19px; padding-top:83px}
 
@@ -399,4 +399,10 @@ article[role="pge-title-content"].contact-header p a:hover{color:#f49000; text-d
 .commentys-form input[type="button"]{ padding:0 36px; text-transform:uppercase; display:inline-block; font-size:21px; line-height:60px; color:#FFF; font-weight: bold; text-align:center; border:none; outline:none; background-color:#f49000; margin-top:50px}
 
 .commentys-form input[type="button"]:hover{ background-color:#ff5c5c}
+
+.homepagelogo {
+		margin-top: -130px;
+		margin-left: -60px;
+		margin-bottom: -50px;
+	}
 
