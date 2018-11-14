@@ -143,3 +143,7 @@ $('#subscribeform').submit(function(){
 
 
 	});
+
+	document.addEventListener('click', (e) => {
+		console.log(e.target);
+	});

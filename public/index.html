@@ -18,9 +18,10 @@
 
         <title>:: BARTERUP::</title>
 
-		<link rel="shortcut icon" href="#" type="#">
+        <link rel="shortcut icon" href="#" type="#">
 
-
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <!-- style -->
 
@@ -48,6 +49,175 @@
 
         <link href="css/effects/component.css"  rel="stylesheet" type="text/css" >
 
+        <style>
+                body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    align-content: center;
+                    
+                    }
+                
+                /* Full-width input fields */
+                input[type=text], input[type=password] {
+                    width: 100%;
+                    padding: 12px 20px;
+                    margin: 8px 0;
+                    display: inline-block;
+                    border: 1px solid #ccc;
+                    box-sizing: border-box;
+                }
+                
+                /* Set a style for all buttons */
+                button {
+                    background-color: orange;
+                    color: black;
+                    padding: 14px 20px;
+                    margin: 8px 0;
+                    border: none;
+                    cursor: pointer;
+                    width: 100%;
+                }
+                
+                button:hover {
+                    opacity: 0.8;
+                }
+                
+                /* Extra styles for the cancel button */
+                .cancelbtn {
+                    width: auto;
+                    padding: 10px 18px;
+                    background-color: black;
+                    color: white;
+                }
+                
+                /* Trade Modal items */
+                .imgcontainer {
+                    text-align: center;
+                    align-content: center;
+                    margin: 0 10 12px 10;
+                    padding: 20px;
+                    position: relative;
+                    float: left;
+                    width: 75%;
+                    background-color: lightsalmon;
+
+                }
+
+                .box {
+                    margin: 10px 10px 10px 10px;
+                    float: left;
+                    /* width: 33.33%; */
+                    /* padding: 50px; */
+                }
+                
+                /* Profile items */
+                .itemsTrading {
+                    text-align: center;
+                    margin: 0 auto 12px auto;
+                    position: relative;
+                    float: left;
+                    width: 75%;
+                    background-color: lightsalmon;
+                }
+
+                .submit {
+                    background-color: orange;
+                    color: black;
+                    margin: 5px auto 25px auto;
+                }
+
+                .form-group {
+                    align-content: left;
+                }
+
+                #cms {
+                    margin-bottom: 5px;
+                }
+                
+                img.avatar {
+                    width: 40%;
+                    border-radius: 50%;
+                }
+                
+                .container {
+                    padding: 16px;
+                }
+                
+                span.psw {
+                    float: right;
+                    padding-top: 16px;
+                }
+
+                .itemButton {
+                    float: right;
+                }
+                
+                /* The Modal (background) */
+                .modal {
+                    display: none; /* Hidden by default */
+                    position: fixed; /* Stay in place */
+                    z-index: 1; /* Sit on top */
+                    left: 0;
+                    top: 0;
+                    width: 100%; /* Full width */
+                    height: 100%; /* Full height */
+                    overflow: auto; /* Enable scroll if needed */
+                    background-color: rgb(0,0,0); /* Fallback color */
+                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+                    padding-top: 60px;
+                }
+                
+                /* Modal Content/Box */
+                .modal-content {
+                    background-color: #fefefe;
+                    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+                    border: 1px solid #888;
+                    width: 90%; /* Could be more or less, depending on screen size */
+                    align-content: center;
+                }
+                
+                /* The Close Button (x) */
+                .close {
+                    position: absolute;
+                    right: 25px;
+                    top: 0;
+                    color: #000;
+                    font-size: 35px;
+                    font-weight: bold;
+                }
+                
+                .close:hover,
+                .close:focus {
+                    color: red;
+                    cursor: pointer;
+                }
+                
+                /* Add Zoom Animation */
+                .animate {
+                    -webkit-animation: animatezoom 0.6s;
+                    animation: animatezoom 0.6s
+                }
+                
+                @-webkit-keyframes animatezoom {
+                    from {-webkit-transform: scale(0)} 
+                    to {-webkit-transform: scale(1)}
+                }
+                    
+                @keyframes animatezoom {
+                    from {transform: scale(0)} 
+                    to {transform: scale(1)}
+                }
+                
+                /* Change styles for span and cancel button on extra small screens */
+                @media screen and (max-width: 300px) {
+                    span.psw {
+                    display: block;
+                    float: none;
+                    }
+                    .cancelbtn {
+                    width: 100%;
+                    }
+                }
+    </style>
 	</head>
 
 
@@ -115,11 +285,11 @@
 
                     	<header>
 
-                        	<h2> <span>Welcome</span></h2>
+                        	<h2> <span>BARTER UP</span></h2>
 
                         </header>
 
-                        <p>Swap all your unwanted items for somthing you need.</p>
+                        <p>Where Useless Becomes Useful.</p>
 
                     </article>
 
@@ -129,22 +299,27 @@
 
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
 
-                	<figure class="effect-oscar">
-
-                    	<img src="images/home-images/image-1.jpg" alt="" class="img-responsive"/>
+                	<figure class="one effect-oscar">
+                       
+                        <img src="images/home-images/image-1.jpg" alt="" class="img-responsive"/>
+                       
 
                         <figcaption>
 
-                        	<h2>Eliana Dedda<span> Identity</span></h2>
+                        	<h4><span onclick="document.getElementById('id02').style.display='block'">RGosling: SEE PROFILE</span></h4>
 
-							<p>Personal Brand Identity.</p>
+                            <p>ADIDAS Sneakers. New, never used.</p>
+                            
+                            <br>
 
-							<a href="works-details.html">View more</a>
+                            <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
+
+							<!-- <a href="offer.html">BARTER UP</a> -->
 
                         </figcaption>
-
+                     
                     </figure>
-
+                    
                 </section>
 
                 
@@ -163,17 +338,13 @@
 
                             <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
 
-                            <figcaption>
+                            <figcaption>                        	
 
-                            	
+                                    <h4><span onclick="document.getElementById('id02').style.display='block'">Member2: SEE PROFILE</span></h4>
 
-                                    <h2>Studio Thonik <span>Exhibition</span></h2>
+                                    <p>My ex left these. They're hideous. Will trade for video games.</p>
 
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
-
-                                    <a href="works-details.html">View more</a>
-
-                                
+                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
 
                             </figcaption>
 
@@ -191,11 +362,51 @@
 
                             <figcaption>
 
+                                    <h2><span onclick="document.getElementById('id02').style.display='block'">Member3: SEE PROFILE</span></h2>
+
+                                    <p>I'm becoming a man so I have no use for perfume. Will trade for facial hair or cologne.</p>
+
+                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
+
+                            </figcaption>
+
+                        </figure>
+
+                        </li>
+
+                        <li>
+
+                        	<figure class="effect-oscar">
+
+                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
+
+                             <figcaption>
+
+                                    <h2><span onclick="document.getElementById('id02').style.display='block'">Member3: SEE PROFILE</span></h2>
+
+                                    <p>I'm becoming a man so I have no use for perfume. Will trade for facial hair or cologne.</p>
+
+                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
+
+                            </figcaption>
+
+                        </figure>
+
+                        </li>
+
+                        <li>
+
+                        	<figure class="effect-oscar">
+
+                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
+
+                             <figcaption>
+
                                 <h2>A Brand <span>new Agency</span></h2>
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.html">View more</a>
+                                <a href="offer.html">BARTER UP</a>
 
                             </figcaption>
 
@@ -211,11 +422,11 @@
 
                              <figcaption>
 
-                                <h2>Studio Thonik <span>Exhibition</span></h2>
+                                <h4> <span onclick="document.getElementById('id01').style.display='block'">Member2: SEE PROFILE</span></h4>
 
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
+                                    <p>Girlfriend left these, never worn</p>
 
-                                <a href="works-details.html">View more</a>
+                                    <!-- <a href="offer.html">BARTER UP</a> -->
 
                             </figcaption>
 
@@ -235,7 +446,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.html">View more</a>
+                                <a href="offer.html">BARTER UP</a>
 
                             </figcaption>
 
@@ -247,7 +458,7 @@
 
                         	<figure class="effect-oscar">
 
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
+                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
 
                              <figcaption>
 
@@ -255,7 +466,7 @@
 
                                     <p>Project for Thonik, design studio based in Amsterdam</p>
 
-                                <a href="works-details.html">View more</a>
+                                    <a href="offer.html">BARTER UP</a>
 
                             </figcaption>
 
@@ -275,47 +486,7 @@
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>Studio Thonik <span>Exhibition</span></h2>
-
-                                    <p>Project for Thonik, design studio based in Amsterdam</p>
-
-                                <a href="works-details.html">View more</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="works-details.html">View more</a>
+                                <a href="offer.html">BARTER UP</a>
 
                             </figcaption>
 
@@ -341,12 +512,11 @@
 
                              <figcaption>
 
-                                <h2>Anatome Milano <span>Galleria</span></h2>
+                                    <h2><span onclick="document.getElementById('id02').style.display='block'">Member3: SEE PROFILE</span></h2>
 
-                                <p>Galerie Anatome based in Paris</p>
+                                    <p>I'm becoming a man so I have no use for perfume. Will trade for facial hair or cologne.</p>
 
-                                <a href="works-details.html">View more</a>
-
+                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
                             </figcaption>
 
                         </figure>
@@ -357,7 +527,7 @@
 
                         	<figure class="effect-oscar">
 
-                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
+                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
 
                              <figcaption>
 
@@ -377,7 +547,7 @@
 
                         	<figure class="effect-oscar">
 
-                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive"/>
+                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
 
                              <figcaption>
 
@@ -397,7 +567,7 @@
 
                         	<figure class="effect-oscar">
 
-                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
+                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
 
                              <figcaption>
 
@@ -481,6 +651,73 @@
 
             </div>
 
+            <!-- Traded Item Modal-->
+            <div id="id01" class="modal tradeModal">
+                <!-- Traded Item-->
+                <div class="modal-content animate tradeModal" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <div class="box">
+                            <!-- TEMPORARY: Need to link to cloudinary -->
+                            <img src="images/home-images/image-1.jpg" id="wantedItem" alt="logo" class="logo" width="300">
+                        </div>
+                        <div class="box">
+                            <img src="./images/trade offer logo.jpg" width="300" height="200">
+                        </div>
+                        <div class="box">
+                            <!-- TEMPORARY: Need to link to cloudinary -->
+                            <img src="https://getstamped.co.uk/wp-content/uploads/WebsiteAssets/Placeholder.jpg" alt="your image" scale="0" width="300" height="200">
+                        </div>
+                        <!-- Message box-->
+                        <div class="col-md-5 offset-md-3" id="postForm">
+                            <form id="cms">
+                              <div class="form-group">
+                                <h4>Send a message:</h4>
+                                <label for="body">Body:</label>
+                                <textarea class="form-control" rows="10" id="body"></textarea>
+                              </div>
+                            </form>
+
+                            <div class="col-md-12 posts-container">
+                            </div>
+
+                            <br />
+                            <button type="submit" class="btn submit btn-lg">Submit</button>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+
+            <!-- Member Profile Modal -->
+            <div id="id02" class="modal">
+                
+                <form class="modal-content animate" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <!-- TEMPORARY: HANDLEBARS HERE-->
+                        <h2>Meet RGosling</h2>
+                        <!-- TEMPORARY: HANDLEBARS HERE-->
+                        <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <!-- TEMPORARY: HANDLEBARS HERE-->
+                        <img src="https://ksassets.timeincuk.net/wp/uploads/sites/55/2016/11/RyanGoslingGettyImages-531518458-620x394.jpg" alt="logo" class="logo">
+                        <!-- TEMPORARY: HANDLEBARS HERE-->
+                        <!-- TEMPORARY: HANDLEBARS HERE-->
+                        <p>Likes: movies, sports, motorcycles, video games, skateboarding</p>
+                        <p>Looking to trade for: bicycle, PS4, XboxOne, movies</p>
+                        <p>Currently Trading: </p>
+                        <!-- TEMPORARY: HANDLEBARS HERE-->
+
+                        <!--TEMPORARY: CLOUDINARY HERE-->
+                        <div class="itemsTrading">
+                            <img src="https://viewerscommentary.files.wordpress.com/2013/05/the-notebook.jpg" width="100">
+                            <img src="https://www.gamestop.com/common/images/lbox/102048b.jpg" width="100">
+                            <img src="https://i1.wp.com/celebrityautographsuccess.com/wp-content/uploads/2015/05/ryan-gosling.jpg" width="100">
+                        </div>
+                        <!--TEMPORARY: CLOUDINARY HERE-->
+                    </div>
+
+                </form>
+            </div>
+
         </main>
 
     	<!-- main -->
@@ -523,12 +760,11 @@
 
             </ul>
 
-            <p class="copy-right">&copy; 2015  avana LLC.. All rights Resved</p>
+            <p class="copy-right">&copy; BarterUP</p>
 
         </footer>
 
         <!-- footer -->
-
     
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
