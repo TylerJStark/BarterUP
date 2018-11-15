@@ -258,7 +258,7 @@ main[role="main-inner-wrapper"] .about-content{ background-color:#f49000; paddin
 
 main[role="main-inner-wrapper"] .about-content p{ font-size:17px; line-height:30px; color:#FFF; padding-bottom:20px}
 
-main[role="main-inner-wrapper"] .thumbnails-pan{ padding-top:30px}
+main[role="main-inner-wrapper"] .thumbnails-pan{ padding-top:30px; margin-top:40px;}
 
 main[role="main-inner-wrapper"] .thumbnails-pan section figure{ background-color:#FFF; position:relative; overflow:hidden; cursor:pointer}
 
@@ -400,9 +400,9 @@ article[role="pge-title-content"].contact-header p a:hover{color:#f49000; text-d
 
 .commentys-form input[type="button"]:hover{ background-color:#ff5c5c}
 
-.homepagelogo {
+/* .homepagelogo {
 		margin-top: -130px;
 		margin-left: -60px;
 		margin-bottom: -50px;
-	}
+	} */
 
