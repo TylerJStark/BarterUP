@@ -2,14 +2,48 @@ require("dotenv").config();
 var express = require("express");
 
 var db = require("./models");
+var express = require('express');
+var passport = require('passport');
+var Strategy = require('passport-local').Strategy;
 
 var app = express();
 var PORT = process.env.PORT || 3000;
+
+//Checks for user and password and confirms password is correct
+passport.use(new Strategy(
+  function(username, password, cb) {
+    db.users.findByUsername(email, function(err, email) {
+      if (err) { return cb(err); }
+      if (!email) { return cb(null, false); }
+      if (email.password != password) { return cb(null, false); }
+      return cb(null, email);
+    });
+}));
+
+//Serializing and deserializing the user
+passport.serializeUser(function(email, cb) {
+  cb(null, email.id);
+});
+
+passport.deserializeUser(function(id, cb) {
+  db.users.findById(id, function (err, email) {
+    if (err) { return cb(err); }
+    cb(null, email);
+  });
+});
 
 // Middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+//Needed for Passport
+app.use(require('morgan')('combined'));
+app.use(require('cookie-parser')());
+app.use(require('body-parser').urlencoded({ extended: true }));
+app.use(require('express-session')({ secret: 'keyboard cat', resave: false, saveUninitialized: false }));
+//Starting passport
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
 require("./routes/apiRoutes")(app);
