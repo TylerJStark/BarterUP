@@ -254,7 +254,9 @@ footer[role="footer"] .copy-right{ text-align:center; display:block; font-size:1
 
 /*===== About ===*/
 
-main[role="main-inner-wrapper"] .about-content{ background-color:#f49000; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:58px}
+main[role="main-inner-wrapper"] .about-content{ background-color:#f49000; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:58px;
+    box-shadow: 10px 10px 5px grey;
+}
 
 main[role="main-inner-wrapper"] .about-content p{ font-size:17px; line-height:30px; color:#FFF; padding-bottom:20px}
 
@@ -405,4 +407,6 @@ article[role="pge-title-content"].contact-header p a:hover{color:#f49000; text-d
 		margin-left: -60px;
 		margin-bottom: -50px;
 	} */
+
+
 

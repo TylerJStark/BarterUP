@@ -1,0 +1,71 @@
+
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy:400,700);
+
+	@import url('https://fonts.googleapis.com/css?family=Luckiest+Guy');
+	
+	
+	div {
+		 position: absolute;
+		 top: 50%;
+		 width: 100%;
+	}
+	
+	p {
+		 color: #000000;
+		 font-family: "Luckiest+Guy", sans-serif;
+		 font-size: 89px;
+		 font-weight: 400;
+		 letter-spacing: -0.05em;
+		 text-align: center;
+		 text-shadow: 3px 5px 5px rgba(0, 0, 0, .3);
+		 
+		 em {
+			  font-style: normal;
+			  display: inline-block;
+			  
+			  &:nth-child(1) {
+				   color: #f49000;
+			  }
+	
+			  &:nth-child(2) {
+				   color: #f49000;
+			  }
+	
+			  &:nth-child(3) {
+				   color:#f49000;
+			  }
+	
+			  &:nth-child(4) {
+				   color: #f49000;
+			  }
+	
+			  &:nth-child(5) {   
+				   color: #f49000;
+			  }
+	
+			  &:nth-child(6) {
+				   color: #f49000;
+			  }
+			  
+			  &.bounce-me {
+				   -webkit-animation: bounce 9s infinite ease-in-out;
+				   animation: bounce 4s ease-in-out;
+			  }
+		 }
+	}
+	
+	@-webkit-keyframes bounce {
+		 60% {
+			  -webkit-transform: translate(0px, -200px) scale(1.2);
+			  opacity: 0.8;
+			  text-shadow: 0px 155px 20px rgba(0, 0, 0, 0.8);
+		 }
+	}
+	
+	@keyframes bounce {
+		 60% {
+			  -webkit-transform: translate(0px, -200px) scale(1.2);
+			  opacity: 0.8;
+			  text-shadow: 0px 150px 20px rgba(0, 0, 0, 0.8);
+		 }
+	}
