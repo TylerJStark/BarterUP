@@ -4,9 +4,13 @@ $(document).ready(function() {
    var postId;
    // Sets a flag for whether or not we're updating a post to be false initially
    var updating = false;
- 
+
+     /* global moment */
+    // postsContainer holds all of our posts
+    var postsContainer = $(".posts-container");
+  
    // If we have this section in our url, we pull out the post id from the url
-   // In localhost:8080/cms?post_id=1, postId is 1
+   // In localhost:3000/?post_id=1, postId is 1
    if (url.indexOf("?post_id=") !== -1) {
      postId = url.split("=")[1];
      getPostData(postId);
@@ -15,7 +19,8 @@ $(document).ready(function() {
    // Getting jQuery references to the post body, title, form, and category select
    var bodyInput = $("#body");
    var cmsForm = $("#cms");
-   $(cmsForm).on(".submit", function handleFormSubmit(event) {
+   $(cmsForm).on("submit", function handleFormSubmit(event) {
+     console.log("Clicked");
      event.preventDefault();
      // Wont submit the post if we are missing a body
      if (!bodyInput.val().trim()) {
@@ -42,7 +47,8 @@ $(document).ready(function() {
    // Submits a new post and brings user to post page upon completion
    function submitPost(Post) {
      $.post("/api/posts/", Post, function() {
-       window.location.href = "/";
+      //  window.location.href = "/";
+      getPosts();
      });
    }
  
@@ -51,7 +57,7 @@ $(document).ready(function() {
      $.get("/api/posts/" + id, function(data) {
        if (data) {
          // If this post exists, prefill our cms forms with its data
-         bodyInput.val(data.body);
+         //postsContainer.val(data.body);
          // If we have a post with this id, set a flag for us to know to update the post
          // when we hit submit
          updating = true;
@@ -61,7 +67,7 @@ $(document).ready(function() {
 
   /* global moment */
   // blogContainer holds all of our posts
-  var postsContainer = $(".posts-container");
+  // var postsContainer = $(".posts-container");
 
   // This function grabs posts from the database and updates the view
   function getPosts(category) {
@@ -108,6 +114,7 @@ $(document).ready(function() {
     var formattedDate = new Date(post.createdAt);
     formattedDate = moment(formattedDate).format("MMMM Do YYYY, h:mm:ss a");
     newPostDate.text(formattedDate);
+    newPostCardBody.append(newPostDate);
     newPostCardBody.append(newPostBody);
     newPostCard.append(newPostCardHeading);
     newPostCard.append(newPostCardBody);
@@ -121,7 +128,7 @@ $(document).ready(function() {
     postsContainer.empty();
     var messageH2 = $("<h2>");
     messageH2.css({ "text-align": "center", "margin-top": "50px" });
-    messageH2.html("No posts yet for this category, navigate <a href='/cms'>here</a> in order to create a new post.");
+    messageH2.html("There are no posts between you two.");
     postsContainer.append(messageH2);
   }
 })
