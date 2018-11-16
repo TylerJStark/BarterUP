@@ -24,7 +24,7 @@
 
         <!-- style -->
 
-        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <link href="css/logo.css" rel="stylesheet" type="text/css">
 
         <!-- style -->
 
@@ -54,9 +54,96 @@
 
     
 
-    	<!-- header -->
+        
+        
+            <html>
+                    <head>
+                      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Luckiest+Guy">
+                      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+                    </head>
+                      
+                    <body>
+                      
+                      <div class="container">
+                      <header>
+                        <div class="menu-toggle" data-js="menu-toggle">
+                          <span class="menu-toggle-grippy">Toggle</span>
+                          <span class="menu-toggle-label"></span>
+                        </div>
+                      </header>
+                        
+                      <section class="banner" role="banner">
+                        <h1><img src="images/barterUPlogo.png"></h1>
+                        <!-- <h1>BarterUP</h1>
+                        <h3>BarterUp</h3> -->
+                        <h2>Where useless becomes useful.</h2>
+                        <ul class="homeoptions">
+                                <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</li>
+                                <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Signup</li>
+                        </ul>
+                            
+                    </section>
+                      
+                      <div class="hidden-panel">
+                        
+                        <span class="hidden-panel-close" data-js="hidden-panel-close">Close</span>
+                        
+                        <div class="hidden-panel-content">
+                          
+                          <nav class="hidden-panel-nav">
+                            <h3><img class="navbarlogo" src="images/barterUPlogo.png"></h3>
+                            <ul>
+                              <li><a href="#" title="Home">Home</a></li>
+                              <li><a href="#" title="About">Search</a></li>
+                              <li><a href="#" title="Contact">Project</a></li>
+                            </ul>
+                          </nav>
+                          
+                          <div class="hidden-panel-text">
+                            <p></p>
+                          </div>
+                          
+                          <div class="hidden-panel-credits">
+                            <span>Coded by <a href="https://twitter.com/darrenhuskie" title="Darren Huskie">Darren Huskie</a>.</span>
+                            <span>Powered by <a href="#" title="some framework">some framework</a>.</span>
+                            <span>Hosted by a <a href="#" title="web host">web host</a>.</span>
+                          </div>
+                          
+                        </div>
+                      </div>
+                      </div>
+                  
+                    </body>
+                  </html>
+        
+        
+        <script>
+        var menuToggle = document.querySelector('[data-js="menu-toggle"]');
 
-        	<header role="header">
+// Clear the interval on any click
+document.body.addEventListener('click', function () {
+   clearInterval(interval);
+});
+
+menuToggle.addEventListener('click', function () {
+  document.body.classList.toggle('panel-open');
+  menuToggle.classList.toggle('open');
+});
+
+var closePanel = document.querySelector('[data-js="hidden-panel-close"]');
+
+closePanel.addEventListener('click', function () {
+  document.body.classList.remove('panel-open');
+  menuToggle.classList.remove('open');
+});
+</script>
+        
+        
+        
+        
+        <!-- header -->
+
+        	 <header role="header">
 
             	<div class="container">
 
@@ -91,9 +178,13 @@
 
                 </div>
 
-            </header>
+            </header> 
 
         <!-- header -->
+
+
+
+
 
         <!-- main -->
 
@@ -265,8 +356,8 @@
                 <h2>LOGIN BUTTON FROM MAIN PAGE</h2>
                 <button style.display='block'style="width:auto;"><a href="loginpage.html">Log In</a></button>
                 <button style.display='block'style="width:auto;"><a href="signuppage.html">Sign Up</a></button>
-                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
-                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
+                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
                 <div id="id01" class="modal">
                     
                     <form class="modal-content animate" action="/action_page.php">
@@ -287,7 +378,7 @@
                         <input type="checkbox" checked="checked" name="remember"> Remember me
                         </label>
                     </div>
-                    <div class="container" style="background-color:#f1f1f1">
+                    <div class="container" style="background-color:#000000">
                         <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
                         <span class="psw">Forgot <a href="forgotPW.html">password?</a></span>
                     </div>
