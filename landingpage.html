@@ -78,8 +78,8 @@
                         <h3>BarterUp</h3> -->
                         <h2>Where useless becomes useful.</h2>
                         <ul class="homeoptions">
-                                <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</li>
-                                <li><button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Signup</li>
+                                <li><button onclick="document.getElementById('login').style.display='block'" style="width:auto;">Login</li>
+                                <li><button onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Signup</li>
                         </ul>
                             
                     </section>
@@ -95,7 +95,7 @@
                             <ul>
                               <li><a href="#" title="Home">Home</a></li>
                               <li><a href="#" title="About">Search</a></li>
-                              <li><a href="#" title="Contact">Project</a></li>
+                              <li><a href="../BarterUP/projectdetails.html" title="projectdetails">Project</a></li>
                             </ul>
                           </nav>
                           
@@ -104,9 +104,9 @@
                           </div>
                           
                           <div class="hidden-panel-credits">
-                            <span>Coded by <a href="https://twitter.com/darrenhuskie" title="Darren Huskie">Darren Huskie</a>.</span>
+                            <!-- <span>Coded by <a href="https://twitter.com/darrenhuskie" title="Darren Huskie">Darren Huskie</a>.</span>
                             <span>Powered by <a href="#" title="some framework">some framework</a>.</span>
-                            <span>Hosted by a <a href="#" title="web host">web host</a>.</span>
+                            <span>Hosted by a <a href="#" title="web host">web host</a>.</span> -->
                           </div>
                           
                         </div>
@@ -143,23 +143,23 @@ closePanel.addEventListener('click', function () {
         
         <!-- header -->
 
-        	 <header role="header">
+        	 <!-- <header role="header">
 
-            	<div class="container">
+            	<div class="container"> -->
 
                 	<!-- logo -->
 
-                    	<h1>
+                    	<!-- <h1>
 
                         	<a href="index.html" class="homepagelogo" title="avana LLC"><img src="" title="BarterUp" alt=""/></a>
 
-                        </h1>
+                        </h1> -->
 
                     <!-- logo -->
 
                     <!-- nav -->
 
-                    <nav role="header-nav" class="navy">
+                    <!-- <nav role="header-nav" class="navy">
 
                         <ul>
 
@@ -172,13 +172,13 @@ closePanel.addEventListener('click', function () {
 
                         </ul>
 
-                    </nav>
+                    </nav> -->
 
                     <!-- nav -->
 
-                </div>
+                <!-- </div>
 
-            </header> 
+            </header>  -->
 
         <!-- header -->
 
@@ -354,20 +354,20 @@ closePanel.addEventListener('click', function () {
                 </head>
                 <body>
                 <h2>LOGIN BUTTON FROM MAIN PAGE</h2>
-                <button style.display='block'style="width:auto;"><a href="loginpage.html">Log In</a></button>
-                <button style.display='block'style="width:auto;"><a href="signuppage.html">Sign Up</a></button>
-                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
-                <div id="id01" class="modal">
+                <!-- <button style.display='block'style="width:auto;"><a href="loginpage.html">Log In</a></button>
+                <button style.display='block'style="width:auto;"><a href="signuppage.html">Sign Up</a></button> -->
+                
+                <!-- Login Modal -->
+                <div id="login" class="modal">
                     
                     <form class="modal-content animate" action="/action_page.php">
                     <div class="imgcontainer">
-                        <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+                        <span onclick="document.getElementById('close').style.display='none'"class="close" title="Close Modal">&times;</span>
                         <img src="barter_up.jpg" alt="Avatar" class="avatar">
                     </div>
                     <div class="container">
-                        <label for="uname"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="uname" required>
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="Enter Email" name="email" required>
                         <label for="psw"><b>Password</b></label>
                         <input type="password" placeholder="Enter Password" name="psw" required>
                         
@@ -378,15 +378,54 @@ closePanel.addEventListener('click', function () {
                         <input type="checkbox" checked="checked" name="remember"> Remember me
                         </label>
                     </div>
-                    <div class="container" style="background-color:#000000">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                    
+                        <button type="button" onclick="document.getElementById('cancel').style.display='none'" class="cancelbtn">Cancel</button>
                         <span class="psw">Forgot <a href="forgotPW.html">password?</a></span>
-                    </div>
                     </form>
                 </div>
+
+                <!-- Sign up Modal -->
+                <div id="signup" class="modal">
+                    
+                        <form class="modal-content animate" action="/action_page.php">
+                        <div class="imgcontainer">
+                            <span onclick="document.getElementById('close').style.display='none'" class="close" title="Close Modal">&times;</span>
+                            <img src="barter_up.jpg" alt="Avatar" class="avatar">
+                        </div>
+                        <div class="container">
+                            <label for="firstname"><b>First Name</b></label>
+                            <input type="text" id="firstname" placeholder="Enter First Name" name="email" required>
+                            <label for="lastname"><b>Last Name</b></label>
+                            <input type="text" id="lastname" placeholder="Enter Last Name" name="email" required>
+                            <label for="email"><b>Email</b></label>
+                            <input type="text" id="email" placeholder="Enter Email" name="email" required>
+                            <label for="psw"><b>Password</b></label>
+                            <input type="password" id="password" placeholder="Create Password" name="psw" required>
+                            <label for="psw"><b>Verify Password</b></label>
+                            <input type="password" id="password" placeholder="Verify Password" name="psw" required>
+                            
+                            <button type="submit">Register</button>
+    
+                            
+                            <label>
+                            <input type="checkbox" checked="checked" name="remember"> Remember me
+                            </label>
+                        </div>
+                        
+                            <button type="button" onclick="document.getElementById('cancel').style.display='none'" class="cancelbtn">Cancel</button>
+                            <span class="psw">Forgot <a href="forgotPW.html">password?</a></span>
+                        </form>
+                    </div>
                 <script>
                 // Get the modal
-                var modal = document.getElementById('id01');
+                var modal = document.getElementById('closemodal');
+                // When the user clicks anywhere outside of the modal, close it
+                window.onclick = function(event) {
+                    if (event.target == modal) {
+                        modal.style.display = "none";
+                    }
+                }
+                var modal = document.getElementById('close');
                 // When the user clicks anywhere outside of the modal, close it
                 window.onclick = function(event) {
                     if (event.target == modal) {
@@ -394,7 +433,7 @@ closePanel.addEventListener('click', function () {
                     }
                 }
                 </script>
-                        <p> Continue as a guest </p>
+                        <!-- <p> Continue as a guest </p> -->
 
                     </article>
 
