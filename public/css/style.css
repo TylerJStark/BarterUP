@@ -167,6 +167,36 @@ button:hover {
 	color: white;
 }
 
+.postBtn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    display: block;
+    background-color: #f39e00;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    padding: 25px;
+    border-radius: 20px;
+	box-shadow: 0 6px #131211;
+	width: 300px;
+	height: 175px;
+	float: left;
+	margin: 10px;
+}
+
+.postBtn:hover {
+    box-shadow: 0 4px #00000086;
+    top: 2px;
+}
+
+.postBtn:active {
+    box-shadow: 0 0 #5f5f5e;
+    top: 6px;
+}
+
 /* Trade Modal items */
 .imgcontainer {
 	text-align: center;
@@ -207,6 +237,11 @@ button:hover {
 	align-content: left;
 }
 
+#formId {
+	width: "600px";
+	height: "600px";
+}
+
 #cms {
 	margin-bottom: 5px;
 }
@@ -227,6 +262,12 @@ span.psw {
 
 .itemButton {
 	float: right;
+}
+
+.btn {
+	width: 200px;
+	height: 50px;
+	color: white;
 }
 
 /* The Modal (background) */
@@ -562,4 +603,6 @@ article[role="pge-title-content"].contact-header p a:hover{color:#f49000
 
 .form-control {
 	border: 1px solid #f49000;
+	width: "1000px";
+	height: "100px"
 }
