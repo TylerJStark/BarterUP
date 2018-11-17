@@ -10,7 +10,7 @@
 
         <!-- Description, Keywords and Author -->
 
-        <meta name="description" content="">
+        <meta name="BarterUp" content="">
 
         <meta name="author" content="">
 
@@ -18,7 +18,7 @@
 
         <title>:: BARTERUP ::</title>
 
-		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+		<link rel="shortcut icon" href="images/barterUPlogo.png" type="image/x-icon">
 
 
 
@@ -64,7 +64,7 @@
 
                     	<h1>
 
-                        	<a href="index.html" title="avana LLC"><img src="images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="index.html" class="homepagelogo" title="avana LLC"><img src="" title="BarterUp" alt=""/></a>
 
                         </h1>
 
@@ -76,13 +76,12 @@
 
                         <ul>
 
-                            <li><a href="index.html" title="Work">Home</a></li>
+                            <li><a href="index.html" title="Home">Home</a></li>
 
-                            <li><a href="userProfile.html" title="Profile">Profile</a></li>
+                            <li class="nav-active"><a href="about.html" title="Profile">Profile</a></li>
 
-                            <li><a href="about.html" title="About">About</a></li>
+                            <li><a href="projectdetails.html" title="Project">Project</a></li>
 
-                            <li class="nav-active"><a href="contact.html" title="Contact">Contact</a></li>
 
                         </ul>
 
@@ -106,17 +105,17 @@
 
             
 
-            	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+            	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
 
                 	<article role="pge-title-content">
 
                     	<header>
 
-                        	<h2><span>BarterUp</span> Where useless becomes useful.</h2>
+                        	<h2 class=homepagelogo><span><img src="images/barterUPlogo.png"></span></h2>
 
                         </header>
 
-                        <p>Over 40,000 customers use our websites and we love them.</p>
+                        <p>Where useless becomes useful.</p>
 
                     </article>
 
@@ -130,6 +129,15 @@
 
                         <p>Log in | Sign up to Swap</p>
                         <style>
+                            
+                            .homepagelogo{  
+                            margin-top: -124px;
+                            margin-left: -66px;
+                            border-bottom-style: solid;
+                            border-bottom: #000;
+                            border-bottom: 5px;
+                            }
+                            
                             body {font-family: Arial, Helvetica, sans-serif;}
                             
                             /* Full-width input fields */
@@ -224,6 +232,10 @@
                                 color: white;
                                 cursor: pointer;
                             }
+
+                            .aTag {
+                                color: purple;
+                            }
                             
                             /* Add Zoom Animation */
                             .animate {
@@ -255,8 +267,10 @@
                 </head>
                 <body>
                 <h2>LOGIN BUTTON FROM MAIN PAGE</h2>
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
-                <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>
+                <button style.display='block'style="width:auto;"><a href="loginpage.html">Log In</a></button>
+                <button style.display='block'style="width:auto;"><a href="signuppage.html">Sign Up</a></button>
+                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button> -->
+                <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
                 <div id="id01" class="modal">
                     
                     <form class="modal-content animate" action="/action_page.php">
@@ -293,7 +307,7 @@
                     }
                 }
                 </script>
-                        <p> Continue as a guest </p>
+                        <a class="aTag"href="search.html"> Continue as a guest </a>
 
                     </article>
 
@@ -303,73 +317,7 @@
 
                 <div class="clearfix"></div>
 
-                
-
-                <!-- thumbnails -->
-
-                	<div class="thumbnails-pan">
-
-                    	<section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-
-                        	<figure>
-
-                            	<img src="images/about-images/about-image-1.jpg" class="img-responsive"/>
-
-                            	<figcaption>
-
-                                	<h3>John Doe</h3>
-
-                                    <h5>The designer</h5>
-
-                                </figcaption>
-
-                            </figure>
-
-                        </section>
-
-                        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-
-                        	<figure>
-
-                            	<img src="images/about-images/about-image-2.jpg" class="img-responsive"/>
-
-                            	<figcaption>
-
-                                	<h3>kristy Roan</h3>
-
-                                    <h5>The Manager</h5>
-
-                                </figcaption>
-
-                            </figure>
-
-                        </section>
-
-                        <section class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-
-                        	<figure>
-
-                            	<img src="images/about-images/about-image-3.jpg" class="img-responsive"/>
-
-                            	<figcaption>
-
-                                	<h3>Jason takas</h3>
-
-                                    <h5>The Founder</h5>
-
-                                </figcaption>
-
-                            </figure>
-
-                        </section>
-
-                        
-
-                     
-
-                    </div>
-
-                <!-- thumbnails -->
+            
 
                 
 
@@ -387,25 +335,24 @@
 
           
 
-            <!-- nav -->
+             <!-- footer nav -->
 
-            <nav role="footer-nav">
+             <nav role="footer-nav">
 
-            	<ul>
-
-                	<li><a href="index.html" title="Work">Home</a></li>
-
-                    <li><a href="userProfile.html" title="Blog">Profile</a></li>
-
-                    <li><a href="about.html" title="About">About</a></li>
-
-                    <li class="nav-active"><a href="contact.html" title="Contact">Contact</a></li>
-
-                </ul>
-
-            </nav>
-
-            <!-- nav -->
+                    <ul>
+    
+                        <li><a href="index.html" title="Home">Home</a></li>
+    
+                        <li><a href="about.html" title="About">About</a></li>
+    
+                        <li><a href="projectdetails.html" title="Blog">Project</a></li>
+    
+    
+                    </ul>
+    
+                </nav>
+    
+                <!-- footer nav -->
 
             <ul role="social-icons">
 
@@ -419,7 +366,7 @@
 
             </ul>
 
-            <p class="copy-right">&copy; 2018 BarterUP LLC.. All rights Resved</p>
+            <p class="copy-right">&copy; 2018  BarterUp LLC.. All rights Resved</p>
 
         </footer>
 
@@ -445,6 +392,8 @@
 
         <script src="js/html5shiv.js" type="text/javascript"></script>
 
-    </body>
+
+
+</body>
 
 </html>

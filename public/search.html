@@ -18,10 +18,7 @@
 
         <title>:: BARTERUP::</title>
 
-        <link rel="shortcut icon" href="#" type="#">
 
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
         <!-- style -->
 
@@ -49,175 +46,8 @@
 
         <link href="css/effects/component.css"  rel="stylesheet" type="text/css" >
 
-        <style>
-                body {
-                    font-family: Arial, Helvetica, sans-serif;
-                    align-content: center;
-                    
-                    }
-                
-                /* Full-width input fields */
-                input[type=text], input[type=password] {
-                    width: 100%;
-                    padding: 12px 20px;
-                    margin: 8px 0;
-                    display: inline-block;
-                    border: 1px solid #ccc;
-                    box-sizing: border-box;
-                }
-                
-                /* Set a style for all buttons */
-                button {
-                    background-color: orange;
-                    color: black;
-                    padding: 14px 20px;
-                    margin: 8px 0;
-                    border: none;
-                    cursor: pointer;
-                    width: 100%;
-                }
-                
-                button:hover {
-                    opacity: 0.8;
-                }
-                
-                /* Extra styles for the cancel button */
-                .cancelbtn {
-                    width: auto;
-                    padding: 10px 18px;
-                    background-color: black;
-                    color: white;
-                }
-                
-                /* Trade Modal items */
-                .imgcontainer {
-                    text-align: center;
-                    align-content: center;
-                    margin: 0 10 12px 10;
-                    padding: 20px;
-                    position: relative;
-                    float: left;
-                    width: 75%;
-                    background-color: lightsalmon;
+        <script src="https://chatwee-api.com/v2/script/5be71741bd616d6904d3feb6.js"></script>
 
-                }
-
-                .box {
-                    margin: 10px 10px 10px 10px;
-                    float: left;
-                    /* width: 33.33%; */
-                    /* padding: 50px; */
-                }
-                
-                /* Profile items */
-                .itemsTrading {
-                    text-align: center;
-                    margin: 0 auto 12px auto;
-                    position: relative;
-                    float: left;
-                    width: 75%;
-                    background-color: lightsalmon;
-                }
-
-                .submit {
-                    background-color: orange;
-                    color: black;
-                    margin: 5px auto 25px auto;
-                }
-
-                .form-group {
-                    align-content: left;
-                }
-
-                #cms {
-                    margin-bottom: 5px;
-                }
-                
-                img.avatar {
-                    width: 40%;
-                    border-radius: 50%;
-                }
-                
-                .container {
-                    padding: 16px;
-                }
-                
-                span.psw {
-                    float: right;
-                    padding-top: 16px;
-                }
-
-                .itemButton {
-                    float: right;
-                }
-                
-                /* The Modal (background) */
-                .modal {
-                    display: none; /* Hidden by default */
-                    position: fixed; /* Stay in place */
-                    z-index: 1; /* Sit on top */
-                    left: 0;
-                    top: 0;
-                    width: 100%; /* Full width */
-                    height: 100%; /* Full height */
-                    overflow: auto; /* Enable scroll if needed */
-                    background-color: rgb(0,0,0); /* Fallback color */
-                    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-                    padding-top: 60px;
-                }
-                
-                /* Modal Content/Box */
-                .modal-content {
-                    background-color: #fefefe;
-                    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-                    border: 1px solid #888;
-                    width: 90%; /* Could be more or less, depending on screen size */
-                    align-content: center;
-                }
-                
-                /* The Close Button (x) */
-                .close {
-                    position: absolute;
-                    right: 25px;
-                    top: 0;
-                    color: #000;
-                    font-size: 35px;
-                    font-weight: bold;
-                }
-                
-                .close:hover,
-                .close:focus {
-                    color: red;
-                    cursor: pointer;
-                }
-                
-                /* Add Zoom Animation */
-                .animate {
-                    -webkit-animation: animatezoom 0.6s;
-                    animation: animatezoom 0.6s
-                }
-                
-                @-webkit-keyframes animatezoom {
-                    from {-webkit-transform: scale(0)} 
-                    to {-webkit-transform: scale(1)}
-                }
-                    
-                @keyframes animatezoom {
-                    from {transform: scale(0)} 
-                    to {transform: scale(1)}
-                }
-                
-                /* Change styles for span and cancel button on extra small screens */
-                @media screen and (max-width: 300px) {
-                    span.psw {
-                    display: block;
-                    float: none;
-                    }
-                    .cancelbtn {
-                    width: 100%;
-                    }
-                }
-    </style>
 	</head>
 
 
@@ -232,11 +62,12 @@
 
             	<div class="container">
 
-                	<!-- logo -->
+                	
 
                     	<h1>
-
-                        	<a href="index.html" title="LOGO"><img src="images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        <!-- logo -->
+                        <!-- 	<a href="index.html" title="LOGO"><img src="images/logo.png" title="BarterUp" alt="BarterUp"/></a> -->
+                            
 
                         </h1>
 
@@ -245,20 +76,26 @@
                     <!-- nav -->
 
                     <nav role="header-nav" class="navy">
+                            <form class="form-inline">
+                                    <input style = "border: 1px solid #f49000" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                                    <button style = "color:#f49000;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                                
+                            </form>
+                            
 
                         <ul>
                             <li class="nav-active"> <a href="index.html" title="Home"> Home</a></li>
 
-                            <li class="nav-active"> <a href="userProfile.html" title="Profile">Profile</a></li>
+                            <li class="nav-active"> <a href="index.html" title="Work">Profile</a></li>
 
                             <li><a href="about.html" title="About">About</a></li>
 
-                            <li><a href="contact.html" title="Contact">Contact</a></li>
+                            <li><a href="blog.html" title="Blog">Blog</a></li>
 
                             <li><a href="contact.html" title="Contact">Contact</a></li>
 
                         </ul>
-
+                       
                     </nav>
 
                     <!-- nav -->
@@ -281,7 +118,7 @@
 
             	<section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
 
-                	<article role="pge-title-content">
+                    <article role="pge-title-content">
 
                     	<header>
 
@@ -317,12 +154,10 @@
 
                             <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
 
-							<!-- <a href="offer.html">BARTER UP</a> -->
-
-                        </figcaption>
+						</figcaption>
                      
                     </figure>
-                    
+
                 </section>
 
                 
@@ -341,13 +176,17 @@
 
                             <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
 
-                            <figcaption>                        	
+                            <figcaption>
 
-                                    <h4><span onclick="document.getElementById('id02').style.display='block'">Member2: SEE PROFILE</span></h4>
+                            	
 
-                                    <p>My ex left these. They're hideous. Will trade for video games.</p>
+                                    <h2> Men's  <span>Dress Shoes</span></h2>
 
-                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
+                                    <p>Project for Thonik, design studio based in Amsterdam</p>
+
+                                    <a href="profile.html">View more</a>
+
+                                
 
                             </figcaption>
 
@@ -365,51 +204,11 @@
 
                             <figcaption>
 
-                                    <h2><span onclick="document.getElementById('id02').style.display='block'">Member3: SEE PROFILE</span></h2>
+                                <h2>IPhone <span>XS max</span></h2>
 
-                                    <p>I'm becoming a man so I have no use for perfume. Will trade for facial hair or cologne.</p>
+                                <p>64 GB. Unlock. Color: white</p>
 
-                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
-
-                             <figcaption>
-
-                                    <h2><span onclick="document.getElementById('id02').style.display='block'">Member3: SEE PROFILE</span></h2>
-
-                                    <p>I'm becoming a man so I have no use for perfume. Will trade for facial hair or cologne.</p>
-
-                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="offer.html">BARTER UP</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -425,51 +224,11 @@
 
                              <figcaption>
 
-                                <h4> <span onclick="document.getElementById('id01').style.display='block'">Member2: SEE PROFILE</span></h4>
-
-                                    <p>Girlfriend left these, never worn</p>
-
-                                    <!-- <a href="offer.html">BARTER UP</a> -->
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
-
-                             <figcaption>
-
-                                <h2>A Brand <span>new Agency</span></h2>
-
-                                <p>Over 40,000 customers use our themes to power their</p>
-
-                                <a href="offer.html">BARTER UP</a>
-
-                            </figcaption>
-
-                        </figure>
-
-                        </li>
-
-                        <li>
-
-                        	<figure class="effect-oscar">
-
-                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
-
-                             <figcaption>
-
-                                <h2>Studio Thonik <span>Exhibition</span></h2>
+                                <h2>Dress Shoes<span>Armani</span></h2>
 
                                     <p>Project for Thonik, design studio based in Amsterdam</p>
 
-                                    <a href="offer.html">BARTER UP</a>
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -485,11 +244,91 @@
 
                              <figcaption>
 
-                                <h2>A Brand <span>new Agency</span></h2>
+                                <h2>Iphone <span> X 64GB</span></h2>
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
-                                <a href="offer.html">BARTER UP</a>
+                                <a href="works-details.html">View more</a>
+
+                            </figcaption>
+
+                        </figure>
+
+                        </li>
+
+                        <li>
+
+                        	<figure class="effect-oscar">
+
+                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
+
+                             <figcaption>
+
+                                <h2>Michael Kors <span>Hand Bag</span></h2>
+
+                                    <p>Project for Thonik, design studio based in Amsterdam</p>
+
+                                <a href="works-details.html">View more</a>
+
+                            </figcaption>
+
+                        </figure>
+
+                        </li>
+
+                        <li>
+
+                        	<figure class="effect-oscar">
+
+                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
+
+                             <figcaption>
+
+                                <h2>7s pluse <span>iphone</span></h2>
+
+                                <p>64 GB. Unlock. Color: white</p>
+
+                                <a href="works-details.html">View more</a>
+
+                            </figcaption>
+
+                        </figure>
+
+                        </li>
+
+                        <li>
+
+                        	<figure class="effect-oscar">
+
+                            <img src="images/home-images/image-2.jpg" alt="" class="img-responsive"/>
+
+                             <figcaption>
+
+                                <h2>Dress Shoes <span>Armani</span></h2>
+
+                                    <p>Project for Thonik, design studio based in Amsterdam</p>
+
+                                <a href="works-details.html">View more</a>
+
+                            </figcaption>
+
+                        </figure>
+
+                        </li>
+
+                        <li>
+
+                        	<figure class="effect-oscar">
+
+                            <img src="images/home-images/image-4.jpg" alt="" class="img-responsive"/>
+
+                             <figcaption>
+
+                                <h2>8s plus <span>Iphone</span></h2>
+
+                                <p>64 GB. Unlock. Color: white</p>
+
+                                <a href="works-details.html">View more</a>
 
                             </figcaption>
 
@@ -515,11 +354,12 @@
 
                              <figcaption>
 
-                                    <h2><span onclick="document.getElementById('id02').style.display='block'">Member3: SEE PROFILE</span></h2>
+                                <h2>Anatome Milano <span>Galleria</span></h2>
 
-                                    <p>I'm becoming a man so I have no use for perfume. Will trade for facial hair or cologne.</p>
+                                <p>Galerie Anatome based in Paris</p>
 
-                                    <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
+                                <a href="works-details.html">View more</a>
+
                             </figcaption>
 
                         </figure>
@@ -530,11 +370,11 @@
 
                         	<figure class="effect-oscar">
 
-                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
+                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
 
                              <figcaption>
 
-                                <h2>A Brand <span>new Agency</span></h2>
+                                <h2>Hand Bag <span>MICHAEL KORS</span></h2>
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
@@ -550,7 +390,7 @@
 
                         	<figure class="effect-oscar">
 
-                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
+                            <img src="images/home-images/image-3.jpg" alt="" class="img-responsive"/>
 
                              <figcaption>
 
@@ -570,11 +410,11 @@
 
                         	<figure class="effect-oscar">
 
-                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive" onclick="document.getElementById('id01').style.display='block'"/>
+                            <img src="images/home-images/image-5.jpg" alt="" class="img-responsive"/>
 
                              <figcaption>
 
-                                <h2>A Brand <span>new Agency</span></h2>
+                                <h2>Hand Bag <span>MICHAEL KORS</span></h2>
 
                                 <p>Over 40,000 customers use our themes to power their</p>
 
@@ -627,23 +467,14 @@
                         </li>
 
                          <!-- <li>
-
                        	 	<figure class="effect-oscar">
-
                             <img src="images/home-images/image-3.jpg" alt="" class="img-responsive"/>
-
                              <figcaption>
-
                                 <h2>Anatome Milano <span>Galleria</span></h2>
-
                                 <p>Galerie Anatome based in Paris</p>
-
                                 <a href="works-details.html">View more</a>
-
                            
-
                         </figure>
-
                         </li> -->
 
                     </ul>
@@ -654,8 +485,8 @@
 
             </div>
 
-            <!-- Traded Item Modal-->
-            <div id="id01" class="modal tradeModal">
+             <!-- Traded Item Modal-->
+             <div id="id01" class="modal tradeModal">
                 <!-- Traded Item-->
                 <div class="modal-content animate tradeModal" action="/action_page.php">
                     <div class="imgcontainer">
@@ -702,7 +533,7 @@
                 <form class="modal-content animate" action="/action_page.php">
                     <div class="imgcontainer">
                         <!-- TEMPORARY: HANDLEBARS HERE-->
-                        <h2>Meet RGosling</h2><a href="userProfile.html">See Full Profile Here</a>
+                        <h2>Meet RGosling</h2>
                         <!-- TEMPORARY: HANDLEBARS HERE-->
                         <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
                         <!-- TEMPORARY: HANDLEBARS HERE-->
@@ -768,11 +599,12 @@
 
             </ul>
 
-            <p class="copy-right">&copy; BarterUP</p>
+            <p class="copy-right">&copy; 2018. All rights Resved</p>
 
         </footer>
 
         <!-- footer -->
+
     
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -799,13 +631,9 @@
 
         <script src="js/effects/modernizr.custom.js"></script>
 
-        <script src="js/moment.js"></script>
-
         <!-- jquery.countdown -->
 
         <script src="js/html5shiv.js" type="text/javascript"></script>
-
-        <script src="js/messageBoard.js" type="text/javascript"></script>
 
     </body>
 
