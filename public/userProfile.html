@@ -40,7 +40,50 @@
 
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.12/handlebars.min.js"></script>
-		<script src="/assets/js/indexUser.js"></script>
+        <script src="js/indexUser.js"></script>
+        <!-- Handlebars script for user info-->
+        <script id="address-template" type="text/x-handlebars-template">
+            {{#each ics}}
+                <header>
+                    <h2> Username: {{username}}</h2>
+                </header>
+
+                <p>Contact Info: {{email}}</p>
+                <p>Awesomeness: {{awesomeness}}</p>
+            {{/each}}
+        </script>
+
+        <!-- Handlebars for posted item -->
+        <script id="address-template" type="text/x-handlebars-template">
+                {{#each ics}}
+                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+
+                    <figure class="one effect-oscar">
+                        <!-- Image upload from Cloudinary-->
+                        <img src="{{imageURL}}" alt="" class="img-responsive"/>
+                    
+
+                        <figcaption>
+                            <!-- Member name and link to profile-->
+                            <h4><a>{{username}}</a></h4>
+
+                            <br>
+                            <!-- Item description -->
+                            <p>{{description}}</p>
+                            
+                            <br>
+
+                            <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
+
+                            <!-- <a href="offer.html">BARTER UP</a> -->
+
+                        </figcaption>
+                    
+                    </figure>
+                    
+                </section>
+            {{/each}}    
+        </script>
 
 	</head>
 
@@ -56,31 +99,24 @@
 
             	<div class="container">
 
-                	<!-- logo 
-                    	<h1>
-                        	<a href="index.html" title="avana LLC"><img src="/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
-                        </h1> -->
-
-                    <!-- logo -->
-
                     <!-- nav -->
 
                     <nav role="header-nav" class="navy">
 
                         <ul>
+                            <li class="nav-active"> <a href="index.html" title="Home"> Home</a></li>
 
-                            <li><a href="index.html" title="Work">Home</a></li>
+                            <li><a href="search.html" title="Search">Search</a></li>
 
-                            <li><a href="search.html" title="About">Search</a></li>
+                            <li class="nav-active"> <a href="userProfile.html" title="Profile">Profile</a></li>
 
-                            <li class="nav-active"><a href="userProfile.html" title="userProfile">Profile</a></li>
+                            <li><a href="about.html" title="About">About</a></li>
 
                             <li><a href="contact.html" title="Contact">Contact</a></li>
 
                         </ul>
 
                     </nav>
-
                     <!-- nav -->
 
                 </div>
@@ -95,58 +131,45 @@
 
             <div class="row">
 
-            	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
+            	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="searchUsername">
 
-                    <h2>Hey BarterUp User!</h2>
+                    <h2>Hey {{username}}!</h2>
                     <h2>What would you like to do?</h2>
 
-                    <div style="Inline">
+                    <div display="inline-block">
                         <!-- POST BUTTON -->
-                        <button class="postBtn">POST</button>
+                        <span onclick="document.getElementById('id03').style.display='block'"><button class="postBtn">POST</button></span>
                 
                         <!-- SEARCH BUTTON-->
                         <a href="search.html">
                         <button class="postBtn">SEARCH</button>
                         </a>
                     </div>
-                	<article role="pge-title-content" class="blog-header">
+
                         
-                            <li>
-
-                                    <section class="blog-content">
-        
-                                        <a href="blog-details.html">
-        
-                                        <figure>
-        
-                                            <img src="/images/blog-images/profilepicture.png" alt="" class="img-responsive"/>
-        
-                                        </figure>
-        
-                                        </a>
-        
-                                    </section>
-        
-                                </li>
-
                     	
                     <script id="page-template" type="text/x-handlebars-template">
                         
                         {{#each ics}}
                             <header>
-                        	    <h2> Username: {{name}}</h2>
+                        	    <h2> Username: {{username}}</h2>
                             </header>
 
-                            <p> Contact Info: {{email}}</p>
+                            <p>Contact Info: {{email}}</p>
                             <p>Awesomeness: {{awesomeness}}</p>
 
                         {{/each}}
                     </script>
                     
-                    <div id="app"></div>
+                    <div class=".content-placeholder" id="app"></div>
                     </article>
 
-                    <ul class="grid-lod effect-2" id="grid">
+                    
+                    <!--Your new item posts will be displayed in here-->
+                    <div class="content-placeholder"></div>
+
+
+                    <!-- <ul class="grid-lod effect-2" id="grid">
 
 
                         <li>
@@ -471,21 +494,56 @@
 
                     </ul>
 
-                </div>
-
-                
-
-                
-
-                
-
-               
-
-                
-
-                
+                </div> -->
 
             </div>
+
+             <!-- POST MODAL-->
+              <!-- Traded Item Modal-->
+            <div id="id03" class="modal tradeModal">
+                <!-- Traded Item-->
+                <div class="modal-content animate tradeModal" action="/action_page.php">
+                    <div class="imgcontainer">
+                        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+                        <!--Item Image Upload-->
+                        <div class="imageUpload">
+                            <img src="https://getstamped.co.uk/wp-content/uploads/WebsiteAssets/Placeholder.jpg" width="200" align-content="center">
+                        </div>
+
+                        <br>
+
+                        <!-- Items to Trade for box -->
+                        <div class="col-md-5 offset-md-3" id="postForm">
+                            <form id="cms">
+                                <div class="form-group">
+                                <label for="body">Username:</label>
+                                <textarea name="message" class="form-control" placeholder="Enter Username" rows="1" id="body"></textarea>
+                                </div>
+                                <button type="submit" class="btn submit btn-lg">Submit</button>
+                            </form>
+                        </div>
+                        
+                        <br />
+
+                        <!-- Item Description box-->
+                        <div class="col-md-5 offset-md-3" id="postForm">
+                            <form id="cms">
+                                <div class="form-group">
+                                <label for="body">Item Descripton:</label>
+                                <textarea name="message" class="form-control" placeholder="Leave a description of your item here..." rows="10" id="body"></textarea>
+                                </div>
+                                <!-- <button type="submit" class="btn submit btn-lg">Submit</button> -->
+                            </form>
+                        </div>
+
+                        <br />
+
+                            
+                    </div>
+                </div>
+            </div>
+    
 
         </main>
 

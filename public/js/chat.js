@@ -47,7 +47,7 @@ $(document).ready(function() {
     postsContainer.append(postsToAdd);
   }
 
-   // This function constructs a post's HTML
+   // This function constructs a message post's HTML
    function createNewRow(post) {
     var newPostCard = $("<div>");
     newPostCard.addClass("card");

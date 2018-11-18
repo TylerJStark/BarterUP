@@ -67,4 +67,19 @@ module.exports = function(app) {
         res.json(err);
     });
   });
+
+  //GET route for member profile page by id
+  app.get("/userProfile/:id", function(req, res) {
+    // Add sequelize code to find a single post where the id is equal to req.params.id,
+    // return the result to the user with res.json
+    db.Post.find({
+      where: {
+        id: req.params.id
+      }
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    })
+  });
+  
 }

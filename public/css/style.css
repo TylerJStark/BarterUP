@@ -171,7 +171,7 @@ button:hover {
     outline: none;
     border: none;
     cursor: pointer;
-    display: block;
+    /* display: inline-block; */
     background-color: #f39e00;
     position: relative;
     font-size: 40px;
@@ -201,11 +201,10 @@ button:hover {
 .imgcontainer {
 	text-align: center;
 	align-content: center;
-	margin: 0 10 12px 10;
+	/* margin: 0 0 12px 0; */
 	padding: 20px;
 	position: relative;
 	float: left;
-	width: 75%;
 	background-color: lightsalmon;
 
 }
@@ -242,6 +241,7 @@ button:hover {
 	height: "600px";
 }
 
+
 #cms {
 	margin-bottom: 5px;
 }
@@ -252,7 +252,17 @@ img.avatar {
 }
 
 .container {
-	padding: 16px;
+	background-color: lightsalmon;
+}
+
+.logoSignupContainer {
+	background-color: lightsalmon;
+}
+
+.signupContainer {
+	background-color: lightsalmon;
+	padding: 20px;
+	float: left;	
 }
 
 span.psw {
@@ -445,8 +455,9 @@ footer[role="footer"] .copy-right{ text-align:center; display:block; font-size:1
 
 /*===== About ===*/
 
-main[role="main-inner-wrapper"] .about-content{ background-color:#f49000
-	; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:58px}
+main[role="main-inner-wrapper"] .about-content{ background-color:#f49000}
+	/* ; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:58px} */
+
 
 main[role="main-inner-wrapper"] .about-content p{ font-size:17px; line-height:30px; color:#FFF; padding-bottom:20px}
 
@@ -604,5 +615,5 @@ article[role="pge-title-content"].contact-header p a:hover{color:#f49000
 .form-control {
 	border: 1px solid #f49000;
 	width: "1000px";
-	height: "100px"
+	height: "25px"
 }

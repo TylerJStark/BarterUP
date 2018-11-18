@@ -49,6 +49,38 @@
 
         <link href="css/effects/component.css"  rel="stylesheet" type="text/css" >
 
+        <script id="address-template" type="text/x-handlebars-template">
+            <h1>Welcome, {{username}}</h1>
+            {{#each ics}}
+                <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
+
+                    <figure class="one effect-oscar">
+                        <!-- Image upload from Cloudinary-->
+                        <img src="{{imageURL}}" alt="" class="img-responsive"/>
+                    
+
+                        <figcaption>
+                            <!-- Member name and link to profile-->
+                            <h4><a href="userProfile.html/" + >{{member}}</a></h4>
+
+                            <br>
+                            <!-- Item description -->
+                            <p>{{description}}</p>
+                            
+                            <br>
+
+                            <h2><span onclick="document.getElementById('id01').style.display='block'">BARTER UP</span></h2>
+
+                            <!-- <a href="offer.html">BARTER UP</a> -->
+
+                        </figcaption>
+                    
+                    </figure>
+                    
+                </section>
+            {{/each}}    
+        </script>
+
         <style>
                 body {
                     font-family: Arial, Helvetica, sans-serif;
@@ -234,17 +266,18 @@
 
                 	<!-- logo -->
 
-                    	<h1>
+                    	<!-- <h1>
 
-                        	<a href="index.html" title="LOGO"><img src="images/logo.png" title="avana LLC" alt="avana LLC"/></a>
+                        	<a href="index.html" title="LOGO"><img src="images/logo.png" title="BarterUP LLC" alt="BarterUP LLC"/></a>
 
-                        </h1>
+                        </h1> -->
 
                     <!-- logo -->
 
                     <!-- nav -->
 
                     <nav role="header-nav" class="navy">
+                    
 
                         <ul>
                             <li class="nav-active"> <a href="index.html" title="Home"> Home</a></li>
@@ -287,7 +320,13 @@
 
                             <h4> <span>WELCOME TO</span></h4>
 
-                        	<h2> <span>BARTER UP</span></h2>
+                            <!-- <h2> <span>BARTER UP</span></h2> -->
+                            <h1>
+
+                                <a href="index.html" title="LOGO"><img src="images/logo.png" title="BarterUP LLC" alt="BarterUP LLC"/></a>
+    
+                            </h1>
+    
 
                         </header>
 
@@ -301,19 +340,22 @@
 
                 <section class="col-xs-12 col-sm-6 col-md-6 col-lg-6 grid">
 
+                    <!--Your new item posts will be displayed in here-->
+                    <div class="content-placeholder"></div>
+
                 	<figure class="one effect-oscar">
-                       
+                        <!-- Image upload from Cloudinary-->
                         <img src="images/home-images/image-1.jpg" alt="" class="img-responsive"/>
                        
 
                         <figcaption>
-
-                        	<h4><span onclick="document.getElementById('id02').style.display='block'">RGosling: SEE PROFILE</span></h4>
+                            <!-- Member name and link to profile-->
+                        	<h4><a href="userProfile.html/" + >{{RGosling}} SEE PROFILE</a></h4>
 
                             <br>
-
-                            <p>ADIDAS Sneakers</p>
-                            <p>New, never used. Looking to trade for video games.</p>
+                            <!-- Item description -->
+                            <p>{{ADIDAS Sneakers}}</p>
+                            <p>{{New, never used. Looking to trade for video games.}}</p>
                             
                             <br>
 

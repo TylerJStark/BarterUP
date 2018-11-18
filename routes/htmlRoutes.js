@@ -12,4 +12,9 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/index.html"));
   });
 
+  // search route loads search.html
+  // app.get("/search", function(req, res) {
+  //   res.sendFile(path.join(__dirname, "../public/search.html"));
+  // });
+
 };
