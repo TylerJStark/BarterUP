@@ -201,11 +201,12 @@ button:hover {
 .imgcontainer {
 	text-align: center;
 	align-content: center;
-	/* margin: 0 0 12px 0; */
+	margin: 0 0 12px 0;
 	padding: 20px;
 	position: relative;
 	float: left;
 	background-color: lightsalmon;
+	overflow: auto;
 
 }
 
