@@ -188,7 +188,7 @@ button:hover {
 	background-color: black;
 	color: white;
 }
-
+/* Post and Search button on profile page */
 .postBtn {
     outline: none;
     border: none;
@@ -249,6 +249,7 @@ button:hover {
 	background-color: lightsalmon;
 }
 
+/* Submit button for post modal */
 .submit {
 	background-color: black;
 	color: orange;
@@ -264,6 +265,7 @@ button:hover {
 	height: "600px";
 }
 
+/* logo and image preview for new post */
 .imageUpload {
 	align-content: center;
 	padding-top: 10px;
@@ -296,6 +298,8 @@ img.avatar {
 	float: right;
 	margin: 20px 130px 0px 0px;
 }
+
+/* Logo on Sign up */
 .logoSignupContainer {
 	background-color: lightsalmon;
 	padding: 20px;

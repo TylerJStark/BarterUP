@@ -50,32 +50,41 @@
 
 
 
-            <body>
+    <body>
 
-                <form class="modal-content animate" action="/action_page.php" id="signup">
-        
-                    <div class="signupContainer about-content">
-                        <div class="logoSignupContainer">
-                            <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
-                            <img src="images/signup-logo.jpg" alt="logo" class="logo">
-                        </div>
+        <!-- Sign up Page Modal-->
+        <form class="modal-content animate" action="/action_page.php" id="signup">
 
-                        <h4>Please enter in your information to create a profile with BarterUP</h4>
+            <div class="signupContainer about-content">
+                <div class="logoSignupContainer">
+                    <!-- <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span> -->
+                    <img src="images/signup-logo.jpg" alt="logo" class="logo">
+                </div>
 
-                        <hr>
-                        
-                        <label id="email"><b>Email</b></label>
-                        <input type="text" placeholder="Enter Email" name="email" required>
-                        <label id="username"><b>First Name</b></label>
-                        <input type="text" placeholder="Enter First Name" name="firstname" required>
-                        <label id="username"><b>Last Name</b></label>
-                        <input type="text" placeholder="Enter Last Name" name="lastname" required>
-                        <label id="password"><b>Password</b></label>
-                        <input type="password" placeholder="Re-Enter Password" name="password" required>
-                        
-                        <button type="submit">Sign Up</button>
-                    </div>
-                </form>
-        
-            </body>
+                <h4>Please enter in your information to create a profile with BarterUP</h4>
+
+                <hr>
+                <!-- Forms for user to fill out (email, first name, last name, and PW) -->
+                <!-- Email -->
+                <label id="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                
+                <!-- First Name -->
+                <label id="username"><b>First Name</b></label>
+                <input type="text" placeholder="Enter First Name" name="firstname" required>
+                
+                <!-- Last Name -->
+                <label id="username"><b>Last Name</b></label>
+                <input type="text" placeholder="Enter Last Name" name="lastname" required>
+                
+                <!-- Password -->
+                <label id="password"><b>Password</b></label>
+                <input type="password" placeholder="Re-Enter Password" name="password" required>
+                
+                <!-- Sign up button -->
+                <button type="submit">Sign Up</button>
+            </div>
+        </form>
+
+    </body>
 </html>
