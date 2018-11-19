@@ -227,13 +227,13 @@ button:hover {
 	padding: 20px;
 	position: relative;
 	float: left;
-	background-color: lightsalmon;
+	background-color: orange;
 	overflow: auto;
-
+	width: 100%;
 }
 
 .box {
-	margin: 10px 10px 10px 10px;
+	margin: 5px;
 	float: left;
 	/* width: 33.33%; */
 	/* padding: 50px; */
@@ -251,6 +251,12 @@ button:hover {
 
 /* Submit button for post modal */
 .submit {
+	background-color: black;
+	color: orange;
+	margin: 5px auto 25px auto;
+}
+
+.submitOffer {
 	background-color: black;
 	color: orange;
 	margin: 5px auto 25px auto;
