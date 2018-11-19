@@ -56,24 +56,17 @@
 
             	<div class="container">
 
-                	<!-- logo 
-                    	<h1>
-                        	<a href="index.html" title="avana LLC"><img src="/images/logo.png" title="avana LLC" alt="avana LLC"/></a>
-                        </h1> -->
-
-                    <!-- logo -->
-
-                    <!-- nav -->
-
                     <nav role="header-nav" class="navy">
 
                         <ul>
 
-                            <li><a href="index.html" title="Work">Home</a></li>
+                            <li><a href="index.html" title="login">Login</a></li>
 
                             <li><a href="search.html" title="About">Search</a></li>
 
                             <li class="nav-active"><a href="userProfile.html" title="userProfile">Profile</a></li>
+
+                            <li><a href="projectdetails.html" title="Project">About</a></li>
 
                             <li><a href="contact.html" title="Contact">Contact</a></li>
 
@@ -100,26 +93,11 @@
             
 
             	<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 ">
-
-                	<article role="pge-title-content" class="blog-header">
-                        
-                            <li>
-
-                                    <section class="blog-content">
+      
+                    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" width="200">
         
-                                        <a href="blog-details.html">
-        
-                                        <figure>
-        
-                                            <img src="/images/blog-images/profilepicture.png" alt="" class="img-responsive"/>
-        
-                                        </figure>
-        
-                                        </a>
-        
-                                    </section>
-        
-                                </li>
+                </div>
+                                       
 
                     	
                     <script id="page-template" type="text/x-handlebars-template">
@@ -138,6 +116,16 @@
                     <div id="app"></div>
                     </article>
 
+                    <div display="inline-block">
+                        <!-- POST BUTTON -->
+                        <span onclick="document.getElementById('id03').style.display='block'"><button class="postBtn">POST</button></span>
+                
+                        <!-- SEARCH BUTTON-->
+                        <a href="search.html">
+                        <button class="postBtn">SEARCH</button>
+                        </a>
+                    </div>
+<!-- 
                     <ul class="grid-lod effect-2" id="grid">
 
 
@@ -463,20 +451,70 @@
 
                     </ul>
 
+                </div> -->       
+
+            </div>
+                
+              <!-- Post New Item Modal-->
+              <div id="id03" class="modal tradeModal">
+                <!-- Traded Item-->
+                <div class="modal-content animate tradeModal" action="/action_page.php">
+                    <div class="postContainer">
+                        <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+                       
+                        <!--Item Image Upload-->
+                        <div class="imageUpload">
+                            
+                            <!-- BarterUP logo -->
+                            <img src="images/trade offer logo.jpg" width="275px" height="200px" id="postLogo">
+
+                            <!-- Image Preview-->
+                            <input type="file" accept="image/*" onchange="loadFile(event)">
+                            <img id="output"/>
+                            
+                            <!-- Script of image preview -->
+                            <script>
+                            var loadFile = function(event) {
+                                var output = document.getElementById('output');
+                                output.src = URL.createObjectURL(event.target.files[0]);
+                            };
+                            </script>
+
+                            <!-- <img src="images/trade offer logo.jpg" width="200px" height="200px" id="postLogo"> -->
+
+                        </div>
+
+                        <br>
+
+                        <!-- Items to Trade for box -->
+                        <div class="col-md-5 offset-md-3" id="postForm">
+                            <form id="cms">
+                                <div class="form-group" id="Num1">
+                                    <label for="body">Title:</label>
+                                    <textarea name="message" class="form-control" placeholder="What is your item?" rows="1" id="body"></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        
+                        <br />
+
+                        <!-- Item Description box-->
+                        <div class="col-md-5 offset-md-3" id="Num2">
+                            <form id="cms">
+                                <div class="form-group">
+                                <label for="body">Item Descripton:</label>
+                                <textarea name="message" class="form-control" placeholder="Leave a description of your item here..." rows="5" id="body"></textarea>
+                                </div>
+                                <!-- Submit button -->
+                                <button type="submit" class="btn submit btn-lg">Submit</button>
+                            </form>
+                        </div>
+
+                        <br />
+
+                            
+                    </div>
                 </div>
-
-                
-
-                
-
-                
-
-               
-
-                
-
-                
-
             </div>
 
         </main>
@@ -495,11 +533,11 @@
 
             	<ul>
 
-                    <li><a href="index.html" title="Work">Search</a></li>
+                    <li><a href="index.html" title="Search">Search</a></li>
 
-                    <li><a href="userProfile.html" title="Blog">Profile</a></li>
+                    <li><a href="userProfile.html" title="Profile">Profile</a></li>
 
-                    <li><a href="about.html" title="About">About</a></li>
+                    <li><a href="projectdetails.html" title="Project">About</a></li>
 
                     <li><a href="contact.html" title="Contact">Contact</a></li>
 
@@ -521,7 +559,7 @@
 
             </ul>
 
-            <p class="copy-right">&copy; 2018  POTATO LLC.. All rights Reserved</p>
+            <p class="copy-right">&copy; BarterUp LLC, All rights Reserved</p>
 
         </footer>
 
