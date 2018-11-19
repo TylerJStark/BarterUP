@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
     "password": "Ch@rl3y1",
-    "database": "chatdb",
+    "database": "barterup",
     "host": "localhost",
     "dialect": "mysql"
   },

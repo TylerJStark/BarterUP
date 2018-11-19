@@ -5,10 +5,12 @@
 // Requiring our Post model
 // This allows us to have access to all 
 var db = require("../models");
+var passport = require("../config/passport");
+
 var cloudinary = require("cloudinary"),
     path = require('path'),
     fs = require('fs'),
-    multer = require('multer'),
+    multer = require('multer')
    
 
     var storage = multer.diskStorage({
@@ -32,52 +34,9 @@ cloudinary.config({
   api_key: "467996483638436",
   api_secret: "SaI06VNIIv1xN27OD3RuuCrJ-LI"
 });
-module.exports = function(app) {
-
-
-  // Get all examples
-  app.get("/api/examples",  function(req, res) {
-    db.Example.findAll().then(function(dbExamples) {
-      res.json(dbExamples);
-    });
-  });
-
-  app.get("/api/examples/:id", function(req, res) {
-    
-    var filesPath = path.join(__dirname, 'uploads/');
-    fs.readdir(filesPath, function (err, files) {
-        if (err) {
-            console.log(err);
-            return;
-        }
-
-        files.forEach(function (file) {
-            fs.stat(filesPath + file, function (err, stats) {
-                if (err) {
-                    console.log(err);
-                    return;
-                }
-
-                var createdAt = Date.parse(stats.ctime),
-                    days = Math.round((Date.now() - createdAt) / (1000*60*60*24));
-
-                if (days > 1) {
-                    fs.unlink(filesPath + file);
-                }
-            });
-        });
-    });
-
-    res.sendFile(path.join(__dirname, 'views/index.html'));
-    
-
-
-      db.Example.findOne({})
-
-  });
 // Routes
 // =============================================================
-
+module.exports = function(app) {
 
   // GET route for getting all of the posts
   app.get("/api/posts", function(req, res) {
@@ -101,12 +60,14 @@ module.exports = function(app) {
     })
   });
 
-  // Create a new post
-  app.post("/api/posts", upload.single('file'), function (req, res)  {
-
-    console.log(req.file.path);
+  // POST route for saving a new post
+  app.post("/api/post", upload.single('file'), function(req, res) {
+    console.log(req.body);
     var img = req.file.path;
-    var fileAddress = ''
+    var title = req.body.title;
+    var description = req.body.description;
+    var id = req.body.id;
+    var fileAddress = '';
     var fileId = '';
 
     cloudinary.v2.uploader.upload(img, {folder: "posts/"},  function(error, result) {
@@ -115,27 +76,40 @@ module.exports = function(app) {
       fileAddress = result.secure_url;
       fileId = result.public_id;
 
-    });
       
-    
-  // POST route for saving a new post
- 
-    // Add sequelize code for creating a post using req.body,
-    // then return the result using res.json
-    db.Post.create({
-      body: req.body.body,
-      imageId: fileId,
-      imageURL: fileAddress
-    })
-    .then(function(dbPost) {
-      res.json(dbPost);
-    })
-    .catch(function(err) {
-      res.json(err);
-    });
-    console.log(fileAddress);
 
+      
+
+    }).then(function() {
+          console.log(title);
+          console.log(description);
+          console.log(fileId);
+          console.log(fileAddress);
+          console.log(id);
+
+          db.Post.create({
+            title: title,
+            body: description,
+            imageId: fileId,
+            imageURL: fileAddress,
+            UserId: id
+          })
+          .then(function() {
+            res.redirect(307, "/api/login");
+            
+          })
+          .catch(function(err) {
+            res.json(err);
+          });
+ç
     });
+    
+    
+
+    
+  });
+
+  
 
 
   // PUT route for updating posts
@@ -158,4 +132,47 @@ module.exports = function(app) {
     });
   });
 
-};
+  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+    // Since we're doing a POST with javascript, we can't actually redirect that post into a GET request
+    // So we're sending the user back the route to the members page because the redirect will happen on the front end
+    // They won't get this or even be able to access this page if they aren't authed
+    res.json("/userProfile");
+  });
+
+  app.post("/api/signup", function(req, res) {
+    console.log(req.body);
+    db.User.create({
+      email: req.body.email,
+      password: req.body.password,
+      lastName: req.body.lastName,
+      firstName: req.body.firstName
+    }).then(function() {
+      res.redirect(307, "/api/login");
+    }).catch(function(err) {
+      console.log(err);
+      res.json(err);
+    });
+  });
+
+  // Route for logging user out
+  app.get("/logout", function(req, res) {
+    req.logout();
+    res.redirect("/");
+  });
+
+  // Route for getting some data about our user to be used client side
+  app.get("/api/user_data", function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    }
+    else {
+      // Otherwise send back the user's email and id
+      // Sending back a password, even a hashed password, isn't a good idea
+      res.json({
+        email: req.user.email,
+        id: req.user.id
+      });
+    }
+  });
+}
