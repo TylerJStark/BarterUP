@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS chatdb;
-CREATE DATABASE chatdb;
-USE chatdb;
+DROP DATABASE IF EXISTS barterup;
+CREATE DATABASE barterup;
+USE barterup;
 
