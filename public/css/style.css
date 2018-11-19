@@ -100,6 +100,24 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 }
 
+.indexContainer {
+	float: left;
+	margin: auto;
+}
+
+.loginContainer {
+	background-color: lightpink;
+	padding: 20px;
+	margin: 20px;
+	align-content: center;
+
+}
+
+.loginBtn {
+	background-color: black;
+	color: white;
+}
+
 .clear {
 
 	clear: both;
@@ -108,6 +126,10 @@ blockquote:before, blockquote:after, q:before, q:after {
 
 	height: 0;
 
+}
+
+.indexFooter {
+	margin-bottom: -100px;
 }
 
 a {
@@ -167,16 +189,46 @@ button:hover {
 	color: white;
 }
 
+.postBtn {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    /* display: inline-block; */
+    background-color: #f39e00;
+    position: relative;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    padding: 25px;
+    border-radius: 20px;
+	box-shadow: 0 6px #131211;
+	width: 300px;
+	height: 175px;
+	float: left;
+	margin: 10px;
+}
+
+.postBtn:hover {
+    box-shadow: 0 4px #00000086;
+    top: 2px;
+}
+
+.postBtn:active {
+    box-shadow: 0 0 #5f5f5e;
+    top: 6px;
+}
+
 /* Trade Modal items */
 .imgcontainer {
 	text-align: center;
 	align-content: center;
-	margin: 0 10 12px 10;
+	margin: 0 0 12px 0;
 	padding: 20px;
 	position: relative;
 	float: left;
-	width: 75%;
 	background-color: lightsalmon;
+	overflow: auto;
 
 }
 
@@ -198,13 +250,24 @@ button:hover {
 }
 
 .submit {
-	background-color: orange;
-	color: black;
+	background-color: black;
+	color: orange;
 	margin: 5px auto 25px auto;
 }
 
 .form-group {
 	align-content: left;
+}
+
+#formId {
+	width: "600px";
+	height: "600px";
+}
+
+.imageUpload {
+	align-content: center;
+	padding-top: 10px;
+	padding-left: 30px;
 }
 
 #cms {
@@ -216,8 +279,32 @@ img.avatar {
 	border-radius: 50%;
 }
 
-.container {
-	padding: 16px;
+/* BarterUp image logo in Post new item modal */
+#output {
+	width: 200px;
+	height: 200px;
+}
+/* BarterUp new post modal */
+.postContainer {
+	background-color: orange;	
+	width: 60%;
+	position: absolute;	
+} 
+
+#postLogo {
+	position: relative;
+	float: right;
+	margin: 20px 130px 0px 0px;
+}
+.logoSignupContainer {
+	background-color: lightsalmon;
+	padding: 20px;
+}
+
+.signupContainer {
+	background-color: lightsalmon;
+	padding: 20px;
+	float: left;	
 }
 
 span.psw {
@@ -227,6 +314,18 @@ span.psw {
 
 .itemButton {
 	float: right;
+}
+
+.btn {
+	width: 200px;
+	height: 50px;
+	color: white;
+}
+
+#num1,#num2{
+    display : inline;
+    position: absolute;
+    left: 50px;
 }
 
 /* The Modal (background) */
@@ -376,7 +475,7 @@ main[role="main-home-wrapper"] article[role="pge-title-content"] p,main[role="ma
 
 /*===== footer ===*/
 
-footer[role="footer"]{ background-color:#FFF; padding-top:100px; padding-bottom:77px}
+footer[role="footer"]{ background-color:#FFF; }
 
 footer[role="footer"] > h1 a{ margin:0 auto; display:block; max-width:66px;}
 
@@ -404,8 +503,9 @@ footer[role="footer"] .copy-right{ text-align:center; display:block; font-size:1
 
 /*===== About ===*/
 
-main[role="main-inner-wrapper"] .about-content{ background-color:#f49000
-	; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:58px}
+main[role="main-inner-wrapper"] .about-content{ background-color:#f49000}
+	/* ; padding-top:57px; padding-left:70px; padding-right:67px; padding-bottom:58px} */
+
 
 main[role="main-inner-wrapper"] .about-content p{ font-size:17px; line-height:30px; color:#FFF; padding-bottom:20px}
 
@@ -562,4 +662,6 @@ article[role="pge-title-content"].contact-header p a:hover{color:#f49000
 
 .form-control {
 	border: 1px solid #f49000;
+	width: "1000px";
+	height: "25px"
 }
